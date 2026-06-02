@@ -740,7 +740,7 @@ class EmelyaKettleCardEditor extends LitElement {
     `;
   }
 
-  /* ── Drag & Drop ── */
+  /* Drag & Drop */
   _onDragOver(e) { e.preventDefault(); this._dragOver = true; }
   _onDragLeave() { this._dragOver = false; }
 
