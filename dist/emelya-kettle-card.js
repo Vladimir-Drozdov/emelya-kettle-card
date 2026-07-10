@@ -87,7 +87,7 @@ class EmelyaKettleCard extends LitElement {
       tap_action: { action: "more-info" },
       hold_action: { action: "none" },
       double_tap_action: { action: "none" },
-      title: "Чайник",
+      title: "",
       preheat_temp: 80,
       boil_temp: 100,
       // preheat_mode / boil_mode  - для water_heater (operation_mode)
@@ -127,7 +127,7 @@ class EmelyaKettleCard extends LitElement {
       this.power = newPower;
     }
 
-    // ── Температуры ──
+    // Температуры
     const tempEntityId = this.config.temp_entity;
     if (tempEntityId && hass.states?.[tempEntityId]) {
       const tempState = hass.states[tempEntityId];
@@ -854,7 +854,7 @@ EmelyaKettleCard.getConfigElement = function () {
 
 EmelyaKettleCard.getStubConfig = function () {
   return {
-    title: "Чайник",
+    title: "",
     power_entity: "",
     temp_entity: "",
     base_path: "/local",
